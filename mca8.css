@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color:rgb(50, 219, 224); 
+}
+
+
+.mcalogo{
+    width: 50px;
+    height: 50px;
+}
+
+#ham{
+border: 2px solid black;
+background-color: rgb(50, 219, 224);
+}
+
+
+header{
+    background-color: rgb(50, 219, 224);
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(50, 219, 224);
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    font-size: 2rem;
+    color: rgb(8, 8, 8);
+}
+
+lu a{
+    color: rgb(13, 14, 15);
+    text-decoration:none;
+}
+
+.main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 400px;
+    height:500px ;
+    flex-wrap: wrap;
+    background-color: black;
+    color: rgb(50, 219, 224);
+    margin-top: 50px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-left: 50%;
+}
+
+.main input{
+    width: 300px;
+}
+
+.buttons input{
+    width: 100px;
+}
+
+
+id{
+    width: 100px;
+    height: 200px;
+}
+
+.menu-principal {
+    position: fixed;
+    left: 0;
+    top: 15vh;
+    width: 100%;
+    height: 85vh;
+    background-color: rgb(50, 219, 224);
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-principal li {
+    list-style: none;
+    color: rgb(12, 1, 1);
+    font-size: 1.5em;
+    border-radius: 5px;
+
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(50, 219, 224);
+}
+
+
+#bt-fechar{
+    display: none;
+}
+
+.silveira{
+    display: none;
+    align-items: center;
+    display: flex;
+    border: 2px solid black;
+    background-color: aliceblue;
+    width: 720px;
+    margin-right: 20%;
+
+}
+
+
+.silveira img
+{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+.imperial{
+    align-items: center;
+    display: flex;
+    border: 2px solid black;
+    background-color: aliceblue;
+    width: 80%;
+    margin-right: 20%;
+
+}
+
+
+.imperial img
+ {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+.reginalice{
+    display: none;
+    align-items: center;
+    display: flex;
+    border: 2px solid black;
+    background-color: aliceblue;
+    width: 80%;
+    margin-right: 20%;
+
+}
+
+.reginalice img
+{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+
+.imgcelulas{
+    width: 80%;
+    height: 80%;
+}
+
+#cell{
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 300PX;
+}
+
+select{
+    width: 150px;
+    background-color: black;
+    color: aliceblue;
+    font-size: 2rem;
+    margin-top: 20%;
+}
+
+div, select{
+    margin-right: 20%;
+}
+
+
+/* .celula{
+    display: none;
+} */
+
+@media (min-width: 768px) {
+    #bt-fechar, #bt-hamburguer {
+        display: none;
+    }
+
+    #corpo{
+        background-color: black;
+    }
+
+    .menu-principal {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 40vw;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: rgb(26, 21, 21);
+        border-radius: 5px;
+    }
+
+
+}
