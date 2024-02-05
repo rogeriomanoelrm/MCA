@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="mca8.css">
+<link rel="stylesheet" href="mca12.css">
 </head>
 <body id="paginainicial">
 <body id="corpo">
@@ -14,7 +14,7 @@
 
         <nav>
 
-        <img class="mcalogo" src="./img/logomca.gif" alt="">
+        <img class="mcalogo" src="./img/logo.gif" alt="">
 
 
         <img id="bt-fechar" src="./img/bt-fechar.png" alt="">
@@ -23,7 +23,7 @@
             <ul class="menu-principal">
                 <lu>Home</lu>
                 <lu>Sobre</lu>
-                <lu>Celulas</lu>
+                <lu> <a href="./celulas.php">Celulas</a></lu>
                 <lu><a href="form.php">Contato</a></lu>
                 
             </ul>
@@ -37,16 +37,21 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="./img/DSC08959.JPG" alt="Primeiro Slide">
+      <img class="carro" src="./img/jesus.gif" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./img/DSC09198.JPG" alt="Segundo Slide">
+      <img class="carro" src="./img/encontro.jpg.gif" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="./img/DSC08975.JPG" alt="Terceiro Slide">
+      <img class="carro" src="./img/escola.jpg.gif" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="carro" src="./img/semlimites.gif" alt="Quarto Slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
