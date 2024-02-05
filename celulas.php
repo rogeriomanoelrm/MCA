@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mca8.css">
+    <link rel="stylesheet" href="mca12.css">
     <title>MCA</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header id="ham">
         <nav>
-            <img class="mcalogo" src="./img/logomca.gif" alt="">
+            <img class="mcalogo" src="./img/logo.gif" alt="">
             <img id="bt-fechar" src="./img/bt-fechar.png" alt="">
             <img id="bt-hamburguer" src="./img/bt-hamburguer.png" alt="">
             <ul class="menu-principal">
@@ -29,49 +29,54 @@
             <option value="silveira">Jardim Silveira</option>
             <option value="imperial">Parque Imperial</option>
             <option value="reginalice">Reginalice</option>
+            <option value="tupanci">Tupanci</option>
+
         </select>
     </div>
 
     <div id="conteudoPlaceholder"></div>
 
     <script>
-    document.getElementById('localSelect').addEventListener('change', async function() {
-        var valor = this.value;
-        var divConteudo = document.getElementById('conteudoPlaceholder');
+   
+document.getElementById('localSelect').addEventListener('change', async function() {
+    var valor = this.value;
+    var divConteudo = document.getElementById('conteudoPlaceholder');
 
-        // Limpar conteúdo anterior
-        divConteudo.innerHTML = '';
+    // Limpar conteúdo anterior
+    divConteudo.innerHTML = '';
 
-        // Verificar se um valor foi selecionado
-        if (valor) {
-            // URL da página da qual você quer extrair o conteúdo
-            var urlDaPagina = 'celulas2.php?bairro=' + valor;
+    // Verificar se um valor foi selecionado
+    if (valor) {
+        // URL da página da qual você quer extrair o conteúdo
+        var urlDaPagina = 'celulas2.php'; // Não precisa adicionar valor se você vai buscar o documento inteiro
 
-            try {
-                // Fazendo a requisição para a página
-                const resposta = await fetch(urlDaPagina);
-                const texto = await resposta.text();
-                
-                // Convertendo o texto para um elemento HTML
-                const html = new DOMParser().parseFromString(texto, 'text/html');
-                
-                // Selecionando o conteúdo específico que você quer da página
-                const conteudoEspecifico = html.querySelector('.' + valor);
-                
-                // Verificando se o conteúdo foi encontrado
-                if(conteudoEspecifico) {
-                    // Adicionando o conteúdo ao divConteudo
-                    divConteudo.appendChild(conteudoEspecifico.cloneNode(true));
-                } else {
-                    divConteudo.innerHTML = 'Conteúdo não encontrado.';
-                }
-            } catch (erro) {
-                console.error('Houve um erro ao buscar a página:', erro);
-                divConteudo.innerHTML = 'Não foi possível carregar o conteúdo.';
+        try {
+            // Fazendo a requisição para a página
+            const resposta = await fetch(urlDaPagina);
+            const texto = await resposta.text();
+            
+            // Convertendo o texto para um elemento HTML
+            const html = new DOMParser().parseFromString(texto, 'text/html');
+            
+            // Selecionando o conteúdo específico que você quer da página
+            const conteudoEspecifico = html.getElementById(valor); // Ex: silveira, imperial, reginalice
+            
+            // Verificando se o conteúdo foi encontrado
+            if(conteudoEspecifico) {
+                // Adicionando o conteúdo ao divConteudo
+                divConteudo.innerHTML = conteudoEspecifico.outerHTML;
+            } else {
+                divConteudo.innerHTML = 'Conteúdo não encontrado.';
             }
+        } catch (erro) {
+            console.error('Houve um erro ao buscar a página:', erro);
+            divConteudo.innerHTML = 'Não foi possível carregar o conteúdo.';
         }
-    });
-    </script>
+    }
+});
+</script>
+
+    
 
     <script src="./JS/menu-hamburguer.js"></script>
 </body>
