@@ -50,15 +50,19 @@ lu a {
     flex-wrap: wrap;
     width: 400px;
     height: 500px;
-    background-color: black;
+    background-image: linear-gradient(to right, black, aqua);
     color: rgb(50, 219, 224);
     margin-top: 50px;
     border-radius: 5px;
     margin-bottom: 50px;
+    border: solid 2px aliceblue;
+    
 }
 
 .main input {
     width: 300px;
+    color: aqua;
+    background-color: black;
 }
 
 .buttons input {
@@ -94,18 +98,35 @@ form {
 
 #bt-fechar {
     display: none;
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
 }
+
+#bt-hamburguer {
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+}
+
+
+
+
 
 #silveira, #imperial, #reginalice {
 /*     display: flex;
  */ align-items: center;
     border: 2px solid black;
-    background-color: aliceblue;
+    background-image: linear-gradient(to right, black, aqua);
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
     padding: 20px; /* Adiciona espaço interno */
+    border-radius: 5%;
+    border: solid 2px aliceblue;
 }
 
 #silveira img, #imperial img, #reginalice img {
@@ -121,22 +142,44 @@ form {
 
 #silveira p, #imperial p, #reginalice p {
     margin-left: 20px; /* Adiciona espaço entre a imagem e o texto */
+    background-color: black;
+    color: aqua;
 }
 
 select {
     width: 300px;
     background-color: black;
-    color: aliceblue;
+    color: aqua;
     font-size: 2rem;
     margin-left: 20%;
     margin-top: 5%;
 }
+
+.mcalogo{
+    width: 50px;
+    height: 50px;
+}
+
+
+.whats{
+    width: 50px;
+    height: 50px;
+}
+
+
+.carro {
+    width: 100%; /* makes the image width responsive */
+    height: auto; /* maintains the aspect ratio */
+  }
+  
 
 
 
 @media (min-width: 768px) {
     #bt-fechar, #bt-hamburguer {
         display: none;
+       
+
     }
 
     .menu-principal {
@@ -151,7 +194,12 @@ select {
         align-items: center;
         color:aqua;
         border-radius: 5px;
+
     }
+
+    .carro {
+        height: auto; /* Adjust height on smaller screens if necessary */
+      }
     
     
 }
